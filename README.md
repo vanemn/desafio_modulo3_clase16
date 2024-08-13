@@ -53,3 +53,4 @@ Ingresar a la carpeta del proyecto:
 Autor
 - [Vanessa Morales](https://github.com/vanemn)
 - [Benjamín Pardo](https://github.com/bpardo02)
+- [Nicole Pinilla](https://github.com/Npinilla19)
