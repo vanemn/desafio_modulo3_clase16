@@ -14,11 +14,11 @@ Se genera un prototipo rápido que abarque elementos básicos para que el usuari
 Este archivo contiene programa modularizado, que realiza lo siguiente:
 
 - Muestra un menú interactivo que permite al usuario personalizar su Pizza. 
-a. Permite cambiar el tipo de masa. Actualmente la Pizzería trabaja con
+ * Permite cambiar el tipo de masa. Actualmente la Pizzería trabaja con
 Masa Tradicional, Masa Delgada y Masa con Bordes de Queso.
-b. Permite cambiar el tipo de salsa. Actualmente la Pizzería trabaja con
-Salsa de Tomate, Salsa Alfredo, Salsa Barbecue y Salsa Pesto
-c. Permite modificar ingredientes (agregar y eliminar). Actualmente, la
+ * Permite cambiar el tipo de salsa. Actualmente la Pizzería trabaja con
+Salsa de Tomate, Salsa Alfredo, Salsa Barbecue y Salsa Pesto.
+ * Permite modificar ingredientes (agregar y eliminar). Actualmente, la
 pizzería trabaja con los siguientes ingredientes: Tomate, Champiñones,
 Aceituna, Cebolla, Pollo, Jamón, Carne, Tocino, Queso
 
