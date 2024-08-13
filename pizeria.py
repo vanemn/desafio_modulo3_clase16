@@ -1,9 +1,12 @@
+# Función que muestra los tipos de masa disponibles
 def opciones_masa():  
     print("Tipos de masa disponibles:")  
     print("1. Masa Tradicional")  
     print("2. Masa Delgada")  
     print("3. Masa con Bordes de Queso")  
 
+
+# Función que muestra los tipos de salsa disponibles
 def opciones_salsa():  
     print("Tipos de salsa disponibles:")  
     print("1. Salsa de Tomate")  
@@ -11,6 +14,7 @@ def opciones_salsa():
     print("3. Salsa Barbecue")  
     print("4. Salsa Pesto")  
 
+# Función que muestra los ingredientes disponibles
 def opciones_ingredientes():  
     print("Ingredientes disponibles:")  
     print("1. Queso")  
@@ -21,23 +25,26 @@ def opciones_ingredientes():
     print("6. Cebolla")  
     print("7. Aceitunas")  
     print("8. Piña")  
-  
+
+# Función que permite al usuario agregar un ingrediente a la pizza
 def agregar_ingrediente(ingredientes):  
     opciones_ingredientes()  # Mostrar opciones de ingredientes  
-    try:  
+    try: 
+        # El usuario selecciona un número correspondiente a un ingrediente 
         eleccion = int(input("Seleccione el número del ingrediente que desea agregar: "))  
         ingredientes_disponibles = ['Queso', 'Jamón', 'Pepperoni', 'Champiñones', 'Pimiento',   
                                      'Cebolla', 'Aceitunas', 'Piña']  # Lista de ingredientes  
-
+        # Verifica si la elección es válida y agrega el ingrediente a la lista
         if 1 <= eleccion <= len(ingredientes_disponibles):  
             nuevo_ingrediente = ingredientes_disponibles[eleccion - 1]  
             ingredientes.append(nuevo_ingrediente)  
             print(f"{nuevo_ingrediente} ha sido agregado a su pizza.")  
         else:  
-            print("Opción inválida.")  
+            print("Opción inválida.")  # Maneja opciones fuera de rango
     except ValueError:  
-        print("Por favor ingrese un número válido.")  
+        print("Por favor ingrese un número válido.")  # Maneja entradas no numéricas
 
+# Función que permite al usuario eliminar un ingrediente de la pizza
 def eliminar_ingrediente(ingredientes):  
     if not ingredientes:  
         print("No hay ingredientes para eliminar.")  
@@ -45,7 +52,8 @@ def eliminar_ingrediente(ingredientes):
     print("Ingredientes actualmente en la pizza:")  
     for i, ingrediente in enumerate(ingredientes, 1):  
         print(f"{i}. {ingrediente}")  
-    
+
+     # El usuario selecciona el número del ingrediente que desea eliminar
     try:  
         eleccion = int(input("Ingrese el número del ingrediente que desea eliminar: "))  
         if 1 <= eleccion <= len(ingredientes):  
@@ -93,10 +101,10 @@ def cambiar_salsa():
         return None  
 
 def calcular_tiempo(ingredientes):  
-    return 20 + 2 * len(ingredientes)  
+    return 20 + 2 * len(ingredientes)  # 20 minutos base + 2 minutos por cada ingrediente
 
 print("¡Bienvenido a Pizza JAT!")  
-
+# Variables para almacenar la selección del usuario
 masa = ""  
 salsa = ""  
 ingredientes = []  
@@ -121,10 +129,10 @@ while True:
     opcion = int(input("Seleccione una opción: "))  
 
     if opcion == 1:  
-        agregar_ingrediente(ingredientes)  
+        agregar_ingrediente(ingredientes)  # LLama a la funcion agregar_ingrediente
 
     elif opcion == 2:  
-        eliminar_ingrediente(ingredientes)  
+        eliminar_ingrediente(ingredientes)  # LLama a la funcion eliminar_ingrediente
 
     elif opcion == 3:  
         print("Ingredientes actualmente en la pizza:")  
@@ -147,6 +155,7 @@ while True:
             print(f"La salsa ha sido cambiada a: {salsa}")  
 
     elif opcion == 6:  
+                # Verifica que se hayan seleccionado la masa y la salsa antes de confirmar el pedido
         if not masa or not salsa:  
             print("Por favor, asegúrese de seleccionar masa y salsa antes de confirmar el pedido.")  
             continue  
@@ -156,13 +165,13 @@ while True:
         confirmar = input("¿Desea confirmar su pedido? (s/n): ").lower()  
         if confirmar == 's':  
             print("¡Su pedido ha sido confirmado! Gracias por elegir Pizza JAT.")  
-            break  
+            break  # Sale del bucle y finaliza el programa
         else:  
             print("Pedido cancelado.")  
 
     elif opcion == 7:  
         print("¡Gracias por visitar Pizza JAT!")  
         break  
-
+        # Sale del bucle y finaliza el programa
     else:  
         print("Opción inválida.")
