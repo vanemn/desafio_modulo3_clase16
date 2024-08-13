@@ -11,9 +11,9 @@ solicitud de Pizzas.
 ### Descripción
 
 Se genera un prototipo rápido que abarque elementos básicos para que el usuario pueda pedir su pizza.
-Este archivo contiene programa modularizado. Se realiza lo siguiente:
+Este archivo contiene programa modularizado, que realiza lo siguiente:
 
-- Un menú interactivo que permita al usuario personalizar su Pizza. 
+- Muestra un menú interactivo que permite al usuario personalizar su Pizza. 
 a. Permite cambiar el tipo de masa. Actualmente la Pizzería trabaja con
 Masa Tradicional, Masa Delgada y Masa con Bordes de Queso.
 b. Permite cambiar el tipo de salsa. Actualmente la Pizzería trabaja con
